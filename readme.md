@@ -13,7 +13,7 @@ This application uses a **microservice architecture** with the following service
 4. `notification-service`: Sends email notifications when a certificate status is updated.
 
 ## Deployment
-The containerized application is deployed on an **AWS EKS Cluster**. *More details about the deployment will be added here.*
+The containerized application is deployed on an **AWS EKS Cluster**.
 
 ## API Endpoints
 The host for the endpoints is: `http://aa97153191598445199bd806e767797d-1812338798.us-west-1.elb.amazonaws.com`
