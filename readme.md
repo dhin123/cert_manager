@@ -1,6 +1,7 @@
 # Certificate Manager
 
 ## High Level Architecture
+![Uploading Screenshot 2024-02-01 at 10.36.55 PM.png…]()
 
 
 This application uses a **microservice architecture** with the following services:
