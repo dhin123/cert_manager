@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: cert-service
-        image: sindhus1305/cm-cert-service:latest
+        image: sindhus1305/cm-cert-service:final
         ports:
         - containerPort: 5001

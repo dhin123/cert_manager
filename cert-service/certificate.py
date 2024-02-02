@@ -42,7 +42,7 @@ def create_certificate():
             "status":
                 {
                     "code": 201,
-                    "message": "Success,Certificate created successfully!",
+                    "message": "Certificate created successfully!",
                     "certificate_id": certificate_id
                 }
         }), 201
@@ -97,8 +97,17 @@ def change_certificate_status(certificate_id):
     status = data["status"]
     if status == "activate":
         status_value = True
-    else:
+    elif status == "deactivate":
         status_value = False
+    else:
+        return jsonify({
+                "status": {
+                    "code": 400,
+                    "message": f"Invalid value in status field",
+
+                }
+            }), 400
+        
     status_message = "Activated" if status_value else "Deactivated"
     certificate = Certificate.query.get(certificate_id)
     if certificate is not None:
@@ -106,7 +115,7 @@ def change_certificate_status(certificate_id):
         try:
             db.session.commit()
             # call the notification service
-            notification_service_url = "http://notification-service:8001/internal-notification"
+            notification_service_url = "http://notification-service/internal-notification"
             response = requests.post(notification_service_url,
                                      json={"certificate_id": certificate_id,
                                            "status": f"Certificate Status is changed. Certificate is now {status_message}"})

@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: customer-service
-        image: sindhus1305/cm-cust-service:latest
+        image: sindhus1305/cm-cust-service:final
         ports:
         - containerPort: 8000

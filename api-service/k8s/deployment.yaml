@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: api-service
-        image: sindhus1305/cm-api-service:latest
+        image: sindhus1305/cm-api-service:final
         ports:
         - containerPort: 5000

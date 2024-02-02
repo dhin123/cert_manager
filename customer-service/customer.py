@@ -32,13 +32,13 @@ def add_customer():
         try:
             db.session.add(new_customer)
             db.session.commit()
-            log.info(f"Successfully created customer with id: {customer_id}")
+            log.info(f"Successfully created Customer with id: {customer_id}")
             return jsonify(
                 {
                     "status":
                         {
                             "code": 201,
-                            "message": "Success, Customer created successfully!",
+                            "message": "Customer created successfully!",
                             "customer_id": customer_id
                         }
                 }), 201
@@ -47,12 +47,12 @@ def add_customer():
             log.info(f"Error occurred while creating customer: {str(e)}")
             return jsonify({
                 "status": {
-                    "code": 400,
-                    "message": "ERROR",
+                    "code": 500,
+                    "message": "Internal Server error",
                     "error": str(e),
 
                 }
-            }), 400
+            }), 500
     else:
         log.info(f"Attempted to create a customer that already exists: {data['email']}")
         return jsonify({
@@ -103,10 +103,9 @@ def delete_user(customer_id):
         log.info(f"Error occurred while deleting customer: {str(e)}")
         return jsonify({
             "status": {
-                "code": 400,
-                "message": "ERROR",
-                "error": str(e)
+                "code": 500,
+                "message": "Internal server error"
             }
-        }), 400
+        }), 500
 
 
