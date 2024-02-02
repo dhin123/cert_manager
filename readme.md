@@ -18,6 +18,7 @@ This application uses a **microservice architecture** with the following service
 2. From coding challenge perspective, a certificate is will always be deactivated at the time of creation. 
 3. From coding challenge perspective, deleting a customer with any associated certificates irrespective of certificate status is not possible.
 4. From coding challenge perspective, activating and deactivating a certificate API only accepts “activate” and “deactivate” values
+5. Currently services,mysql and rabbitmq  are accessed using hardcoded values, ideally I would use env config or configmaps and also a secret manager.
 
 ## Deployment
 The containerized application is deployed on an **AWS EKS Cluster**.
