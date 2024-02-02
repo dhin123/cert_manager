@@ -1,5 +1,3 @@
-Sure, here's a more professional formatting for your README:
-
 # Certificate Manager
 
 ## High Level Architecture
