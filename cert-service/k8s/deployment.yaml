@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cert-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cert-service
+  template:
+    metadata:
+      labels:
+        app: cert-service
+    spec:
+      containers:
+      - name: cert-service
+        image: sindhus1305/cm-cert-service:latest
+        ports:
+        - containerPort: 5001

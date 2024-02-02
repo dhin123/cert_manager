@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "commonName": {
+      "type": "string"
+    },
+    "organizationName": {
+      "type": "string"
+    },
+    "localityName": {
+      "type": "string"
+    },
+    "stateOrProvinceName": {
+      "type": "string"
+    },
+    "countryName": {
+      "type": "string"
+    },
+    "organizationalUnitName": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "publicKey": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commonName",
+    "organizationName",
+    "localityName",
+    "stateOrProvinceName",
+    "countryName",
+    "organizationalUnitName",
+    "emailAddress",
+    "customer_id",
+    "publicKey"
+  ]
+}
