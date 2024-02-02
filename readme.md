@@ -1,7 +1,8 @@
 # Certificate Manager
 
 ## High Level Architecture
-![Uploading Screenshot 2024-02-01 at 10.36.55 PM.png…]()
+
+<img width="1118" alt="Screenshot 2024-02-01 at 10 36 55 PM" src="https://github.com/dhin123/cert_manager/assets/50316763/fac3ba2a-05e5-446b-835b-8c4ff26677dd">
 
 
 This application uses a **microservice architecture** with the following services:
