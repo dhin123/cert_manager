@@ -32,7 +32,7 @@ The host for the endpoints is: `http://aa97153191598445199bd806e767797d-18123387
     ```
     Returns 201 on success, Error codes: 400, 404
 
-- **Delete a Customer** (DELETE `/customer/<customer_id>`)
+- **Delete a Customer** (DELETE `/v1/customer/<customer_id>`)
     ```bash
     curl -X DELETE /v1/customer/<customer_id>
     ```
@@ -51,9 +51,10 @@ The host for the endpoints is: `http://aa97153191598445199bd806e767797d-18123387
   "emailAddress": "freshstart@gmail.com",
   "customer_id": "<customer_id>",
   "publicKey": "Your Public Key"
-}' /v1/certificate 
-    ```
-    Returns 201 on success, Error codes: 404, 400.
+      }'/v1/certificate
+
+       
+Returns 201 on success, Error codes: 404, 400.
 
 - **Update Certificate Status** (PATCH `/v1/certificate/<certificate_id>`)
     ```bash
