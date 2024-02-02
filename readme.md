@@ -21,7 +21,7 @@ This application uses a **microservice architecture** with the following service
 5. Currently services,mysql and rabbitmq  are accessed using hardcoded values, ideally I would use env config or configmaps and also a secret manager.
 
 ## Deployment
-The containerized application is deployed on an **AWS EKS Cluster**.
+The containerized application is deployed on an **AWS EKS Cluster**.Docker images are in my repository in dockerhub.
 
 ## API Endpoints
 The host for the endpoints is: `http://aa97153191598445199bd806e767797d-1812338798.us-west-1.elb.amazonaws.com`
