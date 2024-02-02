@@ -8,6 +8,7 @@ app.register_blueprint(routes)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:my-secret-pw@mysql:3306/mydatabase'
 
+
 db.init_app(app)
 
 with app.app_context():

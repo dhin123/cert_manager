@@ -5,8 +5,6 @@ from certificate import cert_routes
 app = Flask(__name__)
 app.register_blueprint(cert_routes)
 
-# things changed. changed localhost to dev-mysql-doc. Change it back later
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:my-secret-pw@mysql:3306/mydatabase'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:my-secret-pw@mysql:3306/mydatabase'
 
 

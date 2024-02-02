@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: sindhus1305/cm-noti-service:latest
+        image: sindhus1305/cm-noti-service:final
         ports:
         - containerPort: 8001
