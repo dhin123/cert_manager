@@ -14,7 +14,7 @@ ENV PYTHONPATH "${PYTHONPATH}:/app:/app/common_packages"
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 RUN apt-get update && apt-get install -y curl
-# Make port 5000 available to the world outside this container
+# Make port 5001 available to the world outside this container
 EXPOSE 5001
 
 # Run app.py when the container launches
