@@ -17,5 +17,5 @@ RUN apt-get update && apt-get install -y curl
 # Make port 5001 available to the world outside this container
 EXPOSE 5001
 
-# Run app.py when the container launches
+# Run cert_app.py when the container launches
 CMD ["python", "cert-service/cert_app.py"]
